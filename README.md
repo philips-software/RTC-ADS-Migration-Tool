@@ -2,9 +2,9 @@
 Migrate work items from IBM RTC (Rational Team Concert) to ADS (Azure DevOps)
 
 ## Introduction 
-IBM RTC to Azure DevOps (Boards) Migrator is a Python script which migrates work items from IBM RTC to Microsoft Azure DevOps and links parent/child hierarchy.
+This project is a Python script which migrates work items from IBM RTC to Microsoft Azure DevOps and links parent/child hierarchy.
 
-It uses the [Azure DevOps Python API](https://github.com/Microsoft/azure-devops-python-api). and a specific fork of [rtcclient Python package](https://rtcclient.readthedocs.io/en/latest/quickstart.html#) to perform operations via REST API.
+It uses the [Azure DevOps Python API](https://github.com/Microsoft/azure-devops-python-api) and a specific fork of [rtcclient Python package](https://rtcclient.readthedocs.io/en/latest/quickstart.html#) which works with older versions of RTC in order to perform operations via REST API.
 
 ## This script currently supports migrating the following RTC Work Item Types:
 - Epic
@@ -13,8 +13,13 @@ It uses the [Azure DevOps Python API](https://github.com/Microsoft/azure-devops-
 - Defect Story
 - Documentation Story
 - Enhancement Story
+- AST Story
+- Assessment Story
+- Defect Story
 - SIT Story
 - Technical Spike
+
+Support for more work items can be added in the CONFIG.py file
 
 # Setup
 

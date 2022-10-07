@@ -1,0 +1,11 @@
+azure-devops==5.0.0b5
+msrest==0.6.11
+requests==2.22.0
+requests-oauthlib==1.3.0
+sys 
+logging
+time
+json
+os
+datetime
+pprint

@@ -41,9 +41,8 @@ To install this package locally, remove rtcclient if you already have it install
     $ pip install -e ./rtcclient-philips/
 ```
 
-# Config file
-## Auth  Vars
-Config variables are located inside **scripts/CONFIG.py**. In order to run this repo you will need to fill out the following varaible values:
+## Config file auth variables
+Take the template ex_CREDENTIALS.py file, fill out the values, and rename it as `CREDENTIALS.py` In order to run this repo you will need to fill out the following varaible values:
 ```
 # RTC Auth Creds
 RTC_USERNAME = "" # mypassword123
@@ -64,13 +63,23 @@ ads_project_name = '' # "Project-Name"
 user_domain = "" # "@companyname.com"
 
 ```
-## RTC Query Urls
+## Inputs
+Currently there are two accepted input methods. RTC Query URLs, and a CSV file input. To enable one of these inputs, change this code in the `scripts/CONFIG.py` file:
+```
+###################################
+# Input Method (only one can be true at a time)
+###################################
+csv_input = False 
+csv_filepath = "csv_input\\frups ex.csv"
+rtc_query_url_input = True 
+```
+## Input method 1 RTC Query Urls
 Get RTC query URL's by copying the query link online like so:<br>
 <img height="300px" src="./README_media/copy_link_img.png">
 <br>
 Make sure your RTC Queries only query for one RTC Work Item Type at a time, so you have queries for Epics, queries for Features, etc.
 Paste your Query URLs (separated by commas) inside the CONFIG rtc_query_urls object like so:
- ```
+```
 rtc_query_urls = {
     'epic':[
         "queryURL1",
@@ -83,7 +92,10 @@ rtc_query_urls = {
     ],
     ...
 }
- ```
+```
+## Input method 2: CSV input
+Download a CSV file from the RTC query view, make sure all columns are selected. Save this CSV file inside the `csv_input` folder, and add the csv filename to `csv_filepath` inside `scripts/CONFIG.py`
+
 ## Area / Iteration Path Mapping
 Before you run a migration it is important to check your Azure DevOps project output to see what options are available for Area / Iteration Path:
 <br>

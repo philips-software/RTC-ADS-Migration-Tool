@@ -2,9 +2,10 @@ from azure.devops.connection import Connection
 from msrest.authentication import BasicAuthentication
 import pprint
 import CONFIG
+import CREDENTIALS
 
-personal_access_token = CONFIG.personal_access_token
-organization_url = CONFIG.organization_url
+personal_access_token = CREDENTIALS.personal_access_token
+organization_url = CREDENTIALS.organization_url
 # Create a connection to the org
 credentials = BasicAuthentication('', personal_access_token)
 connection = Connection(base_url=organization_url, creds=credentials)

@@ -51,6 +51,14 @@ csv_filepath = "csv_input\\frups ex.csv"
 rtc_query_url_input = True 
 
 ###################################
+# RTC Archive Query URL Input
+###################################
+rtc_archive=True
+#rtc_archive_csv_input="rtc_archive_csv_input\\2teams.csv"
+rtc_archive_csv_input="rtc_archive_csv_input\\huge.csv"
+
+
+###################################
 # RTC Query URL Input
 ###################################
 rtc_query_urls = {

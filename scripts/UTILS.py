@@ -41,7 +41,8 @@ def init_log_file(filename):
 # Create folder if it does not exist. If delete var is specified as True, then delete folder if it exists before creating a new. 
 def init_dir(dirname, delete=False):
     if delete:
-        remove(dirname)
+        # remove(dirname)
+        print('deloet')
     if os.path.exists(dirname) is not True:
         os.mkdir(dirname)
 
